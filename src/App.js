@@ -1,23 +1,45 @@
-import logo from './logo.svg';
 import './App.css';
+import Card from './Components/Card';
 
 function App() {
+
+  const styleCard = {
+    height: '315px',
+    width: '386px',
+    borderStyle: 'solid',
+    borderColor: 'black',
+    borderWidth: '2px',
+    borderShadow:'20px',
+    borderRadius: '2px',
+    backgroundColor:'lightGrey',
+  }
+  const cardData1 =  {
+      courseType: 'On-Demand',
+      cardHeaderStyle: 'header-style',
+      courseTitle: 'Algebra',
+      courseHour: 60,
+      courseEnrollmentDate: '2023-07-01',
+      courseProgressStatus: 'Completed',
+      coursePercentage: 75,
+      courseCredit: 3,
+  };
+  const cardData2 =  {
+
+      courseType: 'On-Demand',
+      cardHeaderStyle: 'header-style',
+      courseTitle: 'Algebra',
+      courseHour: 60,
+      courseEnrollmentDate: '2023-07-01',
+      courseProgressStatus: 'In Progress',
+      coursePercentage: 75,
+      courseCredit: 3,
+
+  };
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Card styleCard={styleCard} cardData={cardData2} />
+      <Card styleCard={styleCard} cardData={cardData1} />
     </div>
   );
 }
